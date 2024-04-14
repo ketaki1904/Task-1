@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="inputbox" value="0" placeholder="0" disabled>
+        </div>
+        <div class="row">
+            <button type="button" class="opr">AC</button>
+            <button type="button"class="opr">DEL</button>
+            <button type="button"class="opr">%</button>
+            <button type="button"class="opr">/</button>
+        </div>
+        <div class="row">
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button"class="opr">*</button>
+        </div>
+        <div class="row">
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button"class="opr">+</button>
+        </div>
+        <div class="row">
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button"class="opr">-</button>
+        </div>
+         <div class="row">
+            <button type="button"id="PlusMinus">&#XB1</button>
+            <button type="button">0</button>
+            <button type="button">.</button>
+            <button type="button"id="eqBtn">/</button>
+        </div>
+        <script src="app.js"></script>
+    </body>     
+    
+</html>
+
+
+
+
+//calculator.css
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+
+}
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#0a0a0a,#3a4452);
+}
+.calculator{
+
+    padding: 15px;
+    box-shadow: 0 0 15px #000;
+    border: 2px solid rgb(116, 114, 110);
+    border-radius: 15px;
+}
+.display input{
+    width: 360px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    margin: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+
+}
+.input::placeholder{
+    color: #fff;
+}button{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: -5px -6px 15px #000;
+    outline: 1px solid #313131;
+    outline-offset: 3px;
+    cursor: pointer;
+}
+button:active{
+    background: #000;
+    transform: translate(2px,2px);
+}
+.opr{
+    color: #fbff00;
+    background: #1e1919;
+    font-weight: 700;
+}
+#eqBtn{
+    background: orangered;
+    font-weight: 900;
+}
